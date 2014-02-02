@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/standard_square_margin"
+        android:orientation="vertical" >
+
+        <com.nmotion.android.HeaderClass
+            android:id="@+id/header_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/cuisine_screen_title_layout"
+            layout="@layout/screen_title_layout" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+        </FrameLayout>
+
+        <include
+            android:id="@+id/restaurant_screen_filter_layout"
+            layout="@layout/restaurant_filter_layout"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_plate_global" >
+
+            <EditText
+                android:id="@+id/search_panel_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/textfield_search"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="Search"
+                android:textColor="@color/light_gray" >
+            </EditText>
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/btn_search_dialog"
+                android:clickable="true" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="30dp"
+                    android:maxWidth="30dp"
+                    android:src="@drawable/ic_menu_close_clear_cancel" >
+                </ImageView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@android:style/Widget.ProgressBar.Large.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+            </ProgressBar>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/cuisine_list_screen_empty_list_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Sorry, There Are No Cuisines Available At The Moment."
+            android:textColor="@color/black" >
+        </TextView>
+
+        <ListView
+            android:id="@+id/cuisine_screen_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </ListView>
+
+        <FrameLayout
+            android:id="@+id/drop_search_result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/default_button_style"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="dropSearchListener" >
+
+            <TextView
+                android:id="@+id/drop_search_result_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Drop Search Result"
+                android:textColor="@color/black"
+                android:textSize="@dimen/standard_button_text_size"
+                android:textStyle="bold" >
+            </TextView>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

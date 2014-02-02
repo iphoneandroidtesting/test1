@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.nmotion.android.view.TopPanelLayout
+        android:id="@+id/top_panel_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.nmotion.android.view.RestaurantInfoBlock
+        android:id="@+id/restaurantInfoBlock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/txt_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray"
+        android:padding="5dp"
+        android:text="@string/txt_total"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <ViewAnimator
+        android:id="@+id/order_cart_edit_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/slide_in_up"
+        android:outAnimation="@anim/slide_out_down" >
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/gray_red_btn_background_selector"
+            android:onClick="onOrderClick"
+            android:padding="@dimen/standard_upper_button_top_margin"
+            android:text="@string/txt_order" />
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_button_style"
+            android:clickable="true"
+            android:onClick="onDeleteDoneClick"
+            android:padding="@dimen/standard_upper_button_top_margin" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/delete_active"
+                android:gravity="center"
+                android:text="@string/txt_delete" />
+        </FrameLayout>
+    </ViewAnimator>
+
+</LinearLayout>

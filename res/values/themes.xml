@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="NmotionTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:listViewStyle">@style/NmotionListView</item>
+        <item name="android:buttonStyle">@style/NmotionButton</item>
+        <item name="android:checkboxStyle">@style/NmotionCheckBox</item>
+    </style>
+
+    <style name="NmotionListView" parent="android:style/Widget.ListView">
+        <item name="android:listSelector">@android:drawable/list_selector_background</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+
+    <style name="NmotionButton" parent="android:style/Widget.Button">
+        <item name="android:background">@drawable/default_button_style</item>
+    </style>
+
+    <style name="NmotionCheckBox" parent="android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_img_selector</item>
+    </style>
+
+</resources>

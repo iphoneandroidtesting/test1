@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:padding="5dp" >
+    <Button
+        android:id="@+id/btn_menu_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onListClick"
+        android:text="@string/txt_list"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_add_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onAddMoreClick"
+        android:text="@string/txt_add_more"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onAccountClick"
+        android:text="@string/txt_account"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onOrderClick"
+        android:text="@string/txt_order_new"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/txt_screen_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/logo_large"
+        android:maxHeight="48dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_small" />
+    <Button
+        android:id="@+id/btn_menu_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onSignInClick"
+        android:text="@string/txt_sign_in"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onSignOutClick"
+        android:text="@string/txt_sign_out"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onDoneClick"
+        android:text="@string/txt_done"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onEditClick"
+        android:text="@string/txt_edit"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onDeleteClick"
+        android:text="@string/txt_delete"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onRestaurantClick"
+        android:text="@string/txt_restaurant"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/btn_menu_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/gray_red_btn_background_selector"
+        android:onClick="onMenuClick"
+        android:text="@string/txt_menu"
+        android:visibility="invisible" />
+</FrameLayout>

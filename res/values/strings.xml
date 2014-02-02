@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string name="build_number">0.BUILD_NUMBER</string>
+    <string name="app_name">Nmotion</string>
+    <string name="COMMON_ERROR">Error</string>
+    <!--
+    SCREEN TITLES 
+    <string name="add_credit_card_screen_title">add a credit card</string>
+    <string name="confirm_order_screen_title">confirm your order</string>
+    <string name="confirm_order_screen_title_2">Your Order Has Been Sent</string>
+    <string name="favorites_screen_title">favorite items</string>
+    <string name="history_screen_title">order history</string>
+    <string name="menu_screen_title">menu</string>
+    <string name="options_screen_title">item</string>
+    <string name="option_values_screen_title">options</string>
+    <string name="special_instructions_screen_title">special instructions</string>
+     /SCREEN TITLES
+    -->
+    <!-- CREDIT CARD DIALOG TEXT -->
+    <string name="your_credit_cards_empty">You Have No Saved Credit Cards Yet. Create One.</string>
+    <!-- /CREDIT CARD DIALOG TEXT -->
+    <!--
+    ERROR MESSAGE TEXT 
+    <string name="restaurant_not_available_anymore">Sorry, Current restaurant isn\'t available anymore.</string>
+    <string name="gps_location_obtaining_message">Loading data</string>
+    -->
+    <string name="network_unavailable_message">Please check your network connection</string>
+    <string name="txt_order_being_paid">Your order is being paid by other user.</string>
+    <string name="txt_order_has_been_paid">Your order already has been paid by other user.</string>
+    <!-- /ERROR MESSAGE TEXT -->
+    <!--
+    WARNING MESSAGE TEXT 
+    <string name="tobacco_message">Confirm that you are at least 18 years of age and
+		understand that ID will be required at time of delivery. Without
+		proper ID your order cannot be delivered</string>
+    <string name="alcohol_message">Confirm that you are at least 21 years of age and
+		understand that ID will be required at time of delivery. Without
+		proper ID your order cannot be delivered.</string>
+     /WARNING MESSAGE TEXT
+    -->
+    <!-- New Strings -->
+    <string name="txt_hint_email">Email</string>
+    <string name="txt_hint_password">Password</string>
+    <string name="txt_remember">Remember</string>
+    <string name="txt_hint_password_6_characters">Password (6 characters minimum)</string>
+    <string name="txt_hint_confirm_password">Confirm Password</string>
+    <string name="txt_hint_first_name">First Name</string>
+    <string name="txt_hint_last_name">Last Name</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_fogot">Forgot?</string>
+    <string name="txt_sign_in">Sign In</string>
+    <string name="txt_password_successfully_reset">Your password has been successfully reset and emailed to you.</string>
+    <string name="txt_getting_data_from_server_error">Getting data from server error.</string>
+    <string name="txt_registered_successfully">You Registered Successfully</string>
+    <string name="txt_user_was_successfully_registered">User was successfully registered</string>
+    <string name="txt_sign_out">Sign Out</string>
+    <string name="txt_address">Address</string>
+    <string name="txt_phone">Phone</string>
+    <string name="txt_website">Website</string>
+    <string name="txt_check_in">Check In</string>
+    <string name="txt_table">Table</string>
+    <string name="txt_menu">Menu</string>
+    <string name="txt_hint_restaurant_or_meal_name">Restaurant or Meal name</string>
+    <string name="txt_change_your_location">Change Your Location</string>
+    <string name="txt_change_language">Change Language</string>
+    <string name="txt_my_account">My Account</string>
+    <string name="txt_order_cart">Order cart</string>
+    <string name="txt_about">About</string>
+    <string name="txt_faq">FAQ</string>
+    <string name="txt_setting">Settings</string>
+    <string name="txt_done">Done</string>
+    <string name="txt_map">Map</string>
+    <string name="txt_list">List</string>
+    <string name="txt_hint_restaurant_name_search">Restaurant Name Search</string>
+    <string name="txt_danish">Danish</string>
+    <string name="txt_english">English</string>
+    <string name="txt_sign_in_your_account">Sign In Your Account</string>
+    <string name="txt_login_with_facebook">Login with Facebook</string>
+    <string name="txt_please_select_your_language">Please select your language</string>
+    <string name="txt_registration">Registration</string>
+    <string name="txt_restaurant_info">Restaurant Info</string>
+    <string name="txt_restaurants_nearby">Restaurants Nearby</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_update">Update</string>
+    <string name="txt_please_log_in_to_see_your_account_information">Please log in to see your account information.</string>
+    <string name="txt_login_or_register">Login Or Register</string>
+    <string name="txt_i_agree_to_the">I agree to the Nmotion\'s </string>
+    <string name="txt_terms_and_conditions">Terms and Conditions</string>
+    <string name="txt_view">View </string>
+    <string name="txt_no_results_that_satisfies_search_please_try_again">No results that satisfies search, please try again</string>
+    <string name="txt_back_to_list_of_restaurants">Back to list of Restaurants</string>
+    <string name="txt_edit_my_info">Edit My Info</string>
+    <string name="txt_edit_my_credit_cards_info">Edit My Credit Cards Info</string>
+    <string name="txt_my_orders_history">My Orders History</string>
+    <string name="txt_table_number">Table Number</string>
+    <string name="txt_please_enter_the_table_number_below">Please enter the Table/Room Number below.</string>
+    <string name="txt_join">Join</string>
+    <string name="txt_search_restaurant_settings">Search Restaurant settings</string>
+    <string name="txt_hint_city">City</string>
+    <string name="txt_hint_street_address">Street Address</string>
+    <string name="txt_near_by">Near By</string>
+    <string name="txt_within">Within</string>
+    <string name="txt_view_restaurants">View Restaurants</string>
+    <string name="txt_edit_credit_cards_info">Edit Credit Cards info</string>
+    <string name="txt_edit">Edit</string>
+    <string name="txt_delete">Delete</string>
+    <string name="txt_add_new">Add new</string>
+    <string name="txt_your_credit_cards">Your Credit Cards</string>
+    <string name="txt_add_new_credit_card">ADD NEW Credit Card</string>
+    <string name="txt_your_credit_card">Your Credit Card</string>
+    <string name="txt_card_number">Card number</string>
+    <string name="txt_card_title">Card title:</string>
+    <string name="txt_edit_and_save">Edit and Save</string>
+    <string name="txt_save">Save</string>
+    <string name="txt_no_menu_categories">Sorry, there are no menu categories for this restaurant available at the moment.</string>
+    <string name="txt_hint_meal_name_search">Meal Name Search</string>
+    <string name="txt_meal_details">Meal details</string>
+    <string name="txt_restaurant">Restaurant</string>
+    <string name="txt_you_have_checked_out">You have checked-out, thank you for choosing our restaurant, come again</string>
+    <string name="txt_table_was_checked_in">The table was checked-in</string>
+    <string name="txt_restaurant_closed">Sorry, you cannot reserve table as restaurant has been already closed</string>
+    <string name="txt_order_meal">Order Meal</string>
+    <string name="txt_add_more">Add more</string>
+    <string name="txt_meals_options">Meals Options</string>
+    <string name="txt_quantity">Quantity</string>
+    <string name="txt_comment">Comment</string>
+    <string name="txt_your_special_directions">Your Special directions…</string>
+    <string name="txt_order">Order</string>
+    <string name="txt_total">Total: %s</string>
+    <string name="txt_price_string">DKK 0.00</string>
+    <string name="txt_distance_string">0.0  km</string>
+    <string name="txt_about_requirements_1">Merchant’s name: Nmotion ApS, VAT no. 34803706</string>
+    <string name="txt_update_cart">Update Cart</string>
+    <!-- Errors -->
+    <string name="txt_login_error">There was a login error</string>
+    <!-- Order Details screen -->
+    <string name="txt_order_details">Order Details</string>
+    <string name="txt_your_order">Your order</string>
+    <string name="txt_your_order_details">Your order <b>#%s</b> from <b>%s</b></string>
+    <string name="txt_pay_for_friends">Pay for friends</string>
+    <string name="txt_pay_for_friends_question">Do you also pay for your friends?</string>
+    <string name="txt_past_order_notif">Amount has been withdrawn from your account.</string>
+    <string name="txt_product_total">Product Total</string>
+    <string name="txt_sales_tax">Sales Tax</string>
+    <string name="txt_discount">Discount</string>
+    <string name="txt_tip">Tip</string>
+    <string name="txt_your_order_total">Your Order Total</string>
+    <string name="txt_usd">$ </string>
+    <string name="txt_dkk">DKK </string>
+    <string name="txt_get_order_details">Get order details…</string>
+    <string name="txt_continue">Continue</string>
+    <string name="txt_thank_after_pay">Thank you for your order. Your payment is complete.</string>
+    <string name="txt_save_card_question">Do you want save credit card for using later?</string>
+    <string name="txt_thank_after_pay_for_anonimous">Thank you for your order. Your payment is complete. You can register in our system by clicking on button register.</string>
+    <string name="txt_save_card_question_for_anonimous">Do you want save credit card for using later?\nFor save you will need to register after payment.</string>
+    <!-- Choose CC -->
+    <string name="txt_choose_card_for_pay">Choose card for pay</string>
+    <string name="txt_my_orders">My Orders</string>
+    <string name="txt_account">Account</string>
+    <string name="txt_no_results">No results</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_yout_friends_order">Your friends Orders</string>
+    <string name="txt_empty_friends_list">No orders in the restaurant</string>
+    <string name="txt_refresh">Refresh</string>
+    <string name="txt_you_already_checkined">You have already checked-in another restaurant/room. Press Continue to check-out and check-in here.</string>
+    <string name="txt_your_basket_will_be_cleaned">Your basket will be cleaned. Are you sure?</string>
+    <string name="txt_you_already_checkined_and_basket_cleaned">You have already checked-in another restaurant/room. Press Continue to check-out and check-in here. Your basket will be cleaned.</string>
+    <string name="txt_send_order_to_mail">Sending order to mail...</string>
+    <string name="txt_send_successfull">Order was sent</string>
+    <string name="txt_loading">Loading…</string>
+    <string name="options">Options</string>
+    <string name="extra">Extra</string>
+    <!-- dialogs and messages -->
+    <string name="txt_error">Error…</string>
+    <string name="txt_error_try_again">Something went wrong, try again…</string>
+    <string name="txt_getting_menu_categories">Getting menu categories…</string>
+    <string name="txt_getting_menu_category_meals">Getting menu category meals…</string>
+    <string name="txt_getting_meal_description">Getting meal description…</string>
+    <string name="txt_getting_restaurants">Getting restaurants…</string>
+    <string name="txt_updating_user_info">Updating user info…</string>
+    <string name="txt_signing_in">Sign In…</string>
+    <string name="txt_registation_user">Registration user…</string>
+    <string name="txt_finding_location">Finding location…</string>
+    <string name="txt_restore_password">Restore password…</string>
+    <string name="txt_checkouting_from_restaurant">Check Out from restaurant…</string>
+    <string name="txt_checkining_to_restaurant">Checking in to restaurant…</string>
+    <string name="txt_pls_enter_table_number">Please enter table/room number</string>
+    <string name="txt_table_number_more_then_null">Table/room number must be more than 0</string>
+    <string name="checkin_in_facebook">Facebook auto check in</string>
+    <!-- chekin -->
+    <string name="txt_join_to_the_table">Table %s is not empty. Join them? Or change table/room number.</string>
+    <string name="txt_submit_thats_table_empty">Submit check-in if table %s is empty.</string>
+    <string name="txt_location_not_available">Location is not available, please turn on a definition of the location by the internet network.</string>
+    <string name="txt_turn_on">Turn on</string>
+    <string name="txt_your_order_cart_empty">Your order cart is empty</string>
+    <!-- about -->
+    <string name="txt_frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="txt_nmtn_address">Tinghojvej 40, 2860 Søborg, Danmark</string>
+    <string name="txt_nmtn_phone">+4520207063</string>
+    <string name="txt_nmtn_mail">mail@nmotion.dk</string>
+    <string name="txt_answer">Answer</string>
+	<!-- new  -->
+	<string name="dialog_update_msg">Your version of the application is old. You should go to Play Store and update it to use it further.\n\nGo to app\'s page in Play Store?</string>
+	<string name="dialog_btn_yes">Yes</string>
+	<string name="feedback">Feedback</string>
+	<string name="meal_not_available_message"> is not available at the moment. Remove it from the basket?</string>
+	<string name="video_presentation">Video presentation</string>
+	<string name="click_to_view_restaurants">Click to view all restaurants</string>
+	<string name="dialog_btn_ok">OK</string>
+	<string name="dialog_btn_cancel">Cancel</string>
+	<string name="txt_order_new">Order</string>
+	<string name="txt_order_order_details_screen">Order</string>
+	<string name="crash_message">Nmotion has stopped working.</string>
+	<string name="next">Next</string>
+	<string name="service_type">Service type</string>
+	<string name="room_number">Room number</string>
+	<string name="in_house">In house</string>
+	<string name="takeaway">Takeaway</string>
+	<string name="room_service">Room service</string>
+	<string name="txt_room_was_checked_in">The room was checked-in</string>	
+	<string name="txt_join_to_the_room">Room %s is not empty. Join them? Or change room number.</string>
+    <string name="txt_submit_thats_room_empty">Submit check-in if room %s is empty.</string>
+    <string name="txt_checkining_to_room">Checking in from room…</string>
+    <string name="txt_checked_in">You are checked-in</string>
+    <string name="pay_with_new_card">Pay with new card</string>
+    <string name="txt_you_were_checked_in">You were checked-in</string>
+    <string name="terms_not_accepted_warning">You should accept terms and conditions to continue</string>
+    <string name="restaurent_closed_message">The restaurant is closed at the moment. So you can just look through the menu. \n\nProceed?</string>
+    <string name="restaurent_closed_warning">You cannot place an order in a closed restaurant</string>
+    <string name="options_ingrids_deleted_messaege">Sorry, but selected options/ingridients were made unavailable on server.</string>
+    <string name="txt_no_category_meals">Sorry, there are no meals for this category available at the moment.</string>
+</resources>

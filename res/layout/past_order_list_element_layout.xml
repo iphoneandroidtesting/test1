@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/standard_list_element_height"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+    <TextView
+        android:id="@+id/txt_order_create_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="12/12/12"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/txt_order_restoraunt_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="restaurant name"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txt_order_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cuisine_list_element_side_padding"
+        android:drawableRight="@android:drawable/ic_menu_more"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="price"
+        android:textColor="@color/black" />
+
+</LinearLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:fadeScrollbars="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/standard_square_margin"
+        android:orientation="vertical" >
+
+        <com.nmotion.android.HeaderClass
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/table"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginTop="-10dp"
+            layout="@layout/screen_title_layout" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black" >
+
+            <TextView
+                android:id="@+id/option_list_screen_restaurant_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="Restaurant Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold" >
+            </TextView>
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                style="@style/myRatingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:numStars="5" >
+            </RatingBar>
+
+            <TextView
+                android:id="@+id/restaurant_no_rating_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0"
+                android:maxLines="1"
+                android:text="No Rating"
+                android:textColor="@color/white"
+                android:visibility="gone" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/gradient_bar_small" >
+
+            <TextView
+                android:id="@+id/option_list_screen_item_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="Item Name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/option_list_screen_item_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0"
+                android:maxLines="1"
+                android:text="$Price"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/gradient_bar_small_flipped"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/option_list_screen_short_note_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="3"
+                android:text="Short Note"
+                android:textColor="@color/black" >
+            </TextView>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+            </ProgressBar>
+        </FrameLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadeScrollbars="true" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/option_list_screen_empty_list_text_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0"
+                    android:gravity="center_horizontal"
+                    android:text="Item customization is not available"
+                    android:textColor="@color/gold_urge"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <ListView
+                    android:id="@+id/cuisine_screen_list_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/white"
+                    android:fadeScrollbars="true"
+                    android:scrollbars="none" >
+                </ListView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0"
+                        android:baselineAligned="false"
+                        android:minHeight="25dp" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Quantity:"
+                            android:textColor="@color/gold_urge"
+                            android:textSize="20sp"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/option_screen_quantity_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/TextView01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="pcs"
+                            android:textColor="@color/gold_urge"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" >
+                        </TextView>
+
+                        <FrameLayout
+                            android:id="@+id/option_screen_plus_button"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/left_button_background_selector"
+                            android:clickable="true"
+                            android:focusable="true" >
+
+                            <TextView
+                                android:id="@+id/option_screen_plus_button_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="-1"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" >
+                            </TextView>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/option_screen_minus_button"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/right_button_background_selector"
+                            android:clickable="true"
+                            android:focusable="true" >
+
+                            <TextView
+                                android:id="@+id/option_screen_minus_button_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="+1"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" >
+                            </TextView>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0"
+                        android:gravity="center" >
+
+                        <FrameLayout
+                            android:id="@+id/option_screen_add_to_bag_button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/orange_button_style"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:minHeight="25dp" >
+
+                            <TextView
+                                android:id="@+id/option_screen_add_to_bag_button_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Add To Bag"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" >
+                            </TextView>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/option_screen_checkout_button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/orange_button_style"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:minHeight="25dp"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@+id/option_screen_checkout_button_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Checkout"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" >
+                            </TextView>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/option_screen_remove_from_bag_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginRight="70dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_button_style"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:minHeight="25dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/option_screen_remove_from_bag_button_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Remove From Bag"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" >
+                        </TextView>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/option_screen_add_instructions_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginRight="70dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/default_button_style"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:minHeight="25dp" >
+
+                        <TextView
+                            android:id="@+id/option_screen_add_instructions_button_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Add Special Item Instructions"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" >
+                        </TextView>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

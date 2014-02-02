@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_view_element_color_selector"
+    android:orientation="horizontal"
+    android:padding="3dip" >
+    <FrameLayout
+        android:id="@+id/img_menu_category_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white"
+        android:padding="2dp" >
+        <ImageView
+            android:id="@+id/img_menu_category_meal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo_def_small" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/txt_menu_category_meal_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/arrow"
+        android:layout_toRightOf="@+id/img_menu_category_layout"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:text="asdasdadaasdasdadaasdasdadaasdasdadaasdasdada"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txt_menu_category_meal_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_menu_category_meal_name"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/txt_menu_category_meal_price"
+        android:layout_toRightOf="@+id/img_menu_category_layout"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingLeft="5dp"
+        android:text="asdadasdadadasdasdadasdadadasdasdadasdadadasdasdadasdadadasd"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/txt_menu_category_meal_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_menu_category_meal_name"
+        android:layout_toLeftOf="@+id/arrow"
+        android:text="DKK 55.55"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txt_menu_category_meal_price_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_menu_category_meal_price"
+        android:layout_toLeftOf="@+id/arrow"
+        android:text="DKK 55.55"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:contentDescription="@string/app_name"
+        android:paddingLeft="3dp"
+        android:src="@drawable/arrow_right" />
+</RelativeLayout>

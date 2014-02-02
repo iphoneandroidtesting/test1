@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/standard_square_margin"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/table"
+            layout="@layout/screen_title_layout" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@android:style/Widget.ProgressBar.Large.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+            </ProgressBar>
+        </FrameLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone" >
+        </ExpandableListView>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Credit Card Number:"
+                    android:textColor="@color/black" >
+                </TextView>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" >
+
+                    <EditText
+                        android:id="@+id/add_new_credit_card_screen_card_number_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLength="19" >
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/add_new_credit_card_screen_card_number_clear_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:maxHeight="@dimen/enter_address_screen_clear_text_image_size"
+                        android:maxWidth="@dimen/enter_address_screen_clear_text_image_size"
+                        android:src="@drawable/clear_field_button_selector" >
+                    </ImageView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Expiration Date (MM-YY):"
+                    android:textColor="@color/black" >
+                </TextView>
+
+                <DatePicker
+                    android:id="@+id/datePicker1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:endYear="2020"
+                    android:startYear="2011" >
+                </DatePicker>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/add_new_credit_card_screen_expire_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLength="5" >
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/add_new_credit_card_screen_expire_clear_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:maxHeight="@dimen/enter_address_screen_clear_text_image_size"
+                        android:maxWidth="@dimen/enter_address_screen_clear_text_image_size"
+                        android:src="@drawable/clear_field_button_selector" >
+                    </ImageView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Security Code:"
+                    android:textColor="@color/black" >
+                </TextView>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0" >
+
+                    <EditText
+                        android:id="@+id/add_new_credit_card_screen_card_code_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="4" >
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/add_new_credit_card_screen_card_code_clear_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:maxHeight="@dimen/enter_address_screen_clear_text_image_size"
+                        android:maxWidth="@dimen/enter_address_screen_clear_text_image_size"
+                        android:src="@drawable/clear_field_button_selector" >
+                    </ImageView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/add_new_credit_card_screen_submit_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/orange_button_style"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <TextView
+                        android:id="@+id/add_new_credit_card_screen_submit_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Submit"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_button_text_size"
+                        android:textStyle="bold" >
+                    </TextView>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

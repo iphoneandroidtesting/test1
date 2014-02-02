@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_view_element_color_selector"
+    android:gravity="center_vertical"
+    android:padding="5dp" >
+    <ToggleButton
+        android:id="@+id/btn_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/btn_delete"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textOff=""
+        android:textOn="" />
+    <FrameLayout
+        android:id="@+id/img_meal_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btn_delete"
+        android:background="@color/white"
+        android:padding="1dp" >
+        <ImageView
+            android:id="@+id/img_meal"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/photo_def_small" />
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/img_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/arrow_right" />
+    <TextView
+        android:id="@+id/txt_meal_neam"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/txt_quantity"
+        android:layout_toRightOf="@+id/img_meal_layout"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="dfgdfgdfgddfgdfgdfgddfgdfgdfgddfgdfgdfgd"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txt_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/txt_price"
+        android:text="55"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/img_more"
+        android:text="1234.354"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/txt_menu_category_meal_price_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/img_more"
+        android:text="123"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:visibility="visible" />
+</RelativeLayout>

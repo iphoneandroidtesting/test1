@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/standard_square_margin"
+        android:orientation="vertical" >
+
+        <com.nmotion.android.HeaderClass
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/favorites_screen_title_layout"
+            layout="@layout/screen_title_layout" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@android:style/Widget.ProgressBar.Large.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+            </ProgressBar>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/favorites_screen_favs_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/favorites_screen_clear_favs_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="0"
+                android:background="@drawable/orange_button_style"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/favorites_screen_clear_favs_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Clear All Favorites"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_button_text_size"
+                    android:textStyle="bold" >
+                </TextView>
+            </FrameLayout>
+
+            <ListView
+                android:id="@+id/cuisine_screen_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/white" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/favorites_screen_empty_list_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="You do not have any Favorites in your account at this time. Create Favorites in your account while placing an order on the URGE website at URGESatisfyYours.com"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" >
+            </TextView>
+
+            <FrameLayout
+                android:id="@+id/favorites_screen_new_order_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="0"
+                android:background="@drawable/default_button_style"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <TextView
+                    android:id="@+id/favorites_screen_new_order_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Place A New URGE"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_button_text_size"
+                    android:textStyle="bold" >
+                </TextView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="100dp"
+                android:gravity="center"
+                android:text="Please log in to see your account information"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" >
+            </TextView>
+
+            <FrameLayout
+                android:id="@+id/favorites_screen_login_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="0"
+                android:background="@drawable/default_button_style"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <TextView
+                    android:id="@+id/favorites_screen_new_order_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Login Or Register"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_button_text_size"
+                    android:textStyle="bold" >
+                </TextView>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

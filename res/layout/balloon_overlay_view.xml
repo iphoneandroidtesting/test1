@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/balloon_main_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/balloon_overlay_bg_selector"
+    android:baselineAligned="false"
+    android:minWidth="200dip"
+    android:orientation="horizontal" >
+
+    <!-- your click region must be some sort of layout container using @id/balloon_inner_layout -->
+
+    <LinearLayout
+        android:id="@+id/balloon_inner_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:scrollbars="none" >
+
+        <ListView
+            android:id="@+id/balloon_inner_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</LinearLayout>

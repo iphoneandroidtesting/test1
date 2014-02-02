@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="questions_array">
+        <item> Kan Nmotion bruges alle steder ?</item>
+        <item>Er mine kortdetaljer sikret ?</item>
+        <item>Kan man ændre sprog ?</item>
+        <item>Koster det noget at downloade Nmotion’s app?</item>
+    </string-array>
+    <string-array name="answers_array">
+        <item>Nmotion app kan bruges på de tilmeldte steder, der kan ses i app’en eller på Nmotion.dk</item>
+        <item>Ja, vi gemmer ikke alle dine kortoplysninger og de er derfor aldrig er i fare.</item>
+        <item>Nmotion findes på dansk og engelsk</item>
+        <item>Nej, Nmotion den er gratis. Du betaler som andre steder gebyr for at benytte dit betalingskort.</item>
+    </string-array>
+
+</resources>

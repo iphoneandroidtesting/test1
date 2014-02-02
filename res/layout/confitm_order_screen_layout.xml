@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/standard_square_margin"
+        android:orientation="vertical" >
+
+        <com.nmotion.android.HeaderClass
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/table"
+            layout="@layout/screen_title_layout" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@android:style/Widget.ProgressBar.Large.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+            </ProgressBar>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/confirm_order_screen_message_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="@color/black" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/sec_code_frame_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Please enter the security code."
+                    android:textColor="@color/black" >
+                </TextView>
+
+                <FrameLayout
+                    android:id="@+id/sec_code_frame_layout_"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp" >
+
+                    <EditText
+                        android:id="@+id/sec_code_edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="4"
+                        android:password="true" >
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/sec_code_clear_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:maxHeight="@dimen/enter_address_screen_clear_text_image_size"
+                        android:maxWidth="@dimen/enter_address_screen_clear_text_image_size"
+                        android:src="@drawable/clear_field_button_selector"
+                        android:visibility="gone" >
+                    </ImageView>
+                </FrameLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/confirm_order_screen_confirm_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/orange_button_style"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/confirm_order_screen_confirm_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Confirm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_button_text_size"
+                    android:textStyle="bold" >
+                </TextView>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/confirm_order_screen_buttons_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="For food or delivery/pickup issues:"
+                android:textColor="@color/black" >
+            </TextView>
+
+            <FrameLayout
+                android:id="@+id/confirm_order_screen_open_email_app_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/default_button_style"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/confirm_order_screen_open_email_app_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="See Email Confirmation"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_button_text_size"
+                    android:textStyle="bold" >
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/confirm_order_screen_call_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/default_button_style"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <TextView
+                    android:id="@+id/confirm_order_screen_call_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Call Restaurant"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_button_text_size"
+                    android:textStyle="bold" >
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/confirm_order_screen_another_order_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/orange_button_style"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <TextView
+                    android:id="@+id/confirm_order_screen_another_order_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Place Another Order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_button_text_size"
+                    android:textStyle="bold" >
+                </TextView>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

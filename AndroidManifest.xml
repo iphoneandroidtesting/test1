@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nmotion"
+    android:versionCode="3"
+    android:versionName="1.1.0" >
+<permission
+    android:name="com.nmotion.permission.MAPS_RECEIVE"
+    android:protectionLevel="signature"/>
+  <uses-permission android:name="com.nmotion.permission.MAPS_RECEIVE"/>
+  <!-- Copied from Google Maps Library/AndroidManifest.xml. -->
+  <uses-sdk
+    android:minSdkVersion="8"
+    android:targetSdkVersion="15"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+  <!-- External storage for caching. -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <!-- My Location -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <!-- Maps API needs OpenGL ES 2.0. -->
+  <uses-feature
+    android:glEsVersion="0x00020000"
+    android:required="true"/>
+
+    <application
+        android:name="com.nmotion.android.App"
+        android:allowBackup="true"
+        android:hasCode="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/NmotionTheme" >
+        <activity
+            android:name="com.nmotion.android.SplashScreen"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nmotion.android.LogInScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name="com.nmotion.android.RegistrationScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name="com.nmotion.android.MyAccountScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name="com.nmotion.android.MyAccountEditScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name="com.nmotion.android.TermsConditionsScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.NavigationMenuActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.AboutScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.RestaurantsListScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.RestaurantsMapScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.RestaurantInfoScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.ChangeYourLocationScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.ChangeLanguageScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.TableCheckInScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.CreditCardsInfoScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.CreditCardsEditScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.CategoriesScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.CategoryMealsScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.CategoryMealDescriptionScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.OrderCartScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.OrderDetailsScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.MealsOptionsScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.DibsPaymentScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.nmotion.android.PastOrdersListScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.PastOrderDetailsScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.FriendsListScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.FAQListScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.FAQDetailsScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nmotion.android.SettingsScreen"
+            android:screenOrientation="portrait" >
+        </activity>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+    		android:value="AIzaSyBrXU7gXwA-8wEn3VMmyBat_W_JvNb4fXs"/>
+    </application>
+
+</manifest>

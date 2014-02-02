@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.nmotion.android.view.TopPanelLayout
+        android:id="@+id/top_panel_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:padding="10dp" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/txt_mean_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nmtn_blue"
+                android:padding="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txt_meal_option_options_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/light_gray"
+                android:padding="5dp"
+                android:text="@string/options"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+            <com.nmotion.android.view.SelectableViewGroup
+                android:id="@+id/meal_options_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+            <TextView
+                android:id="@+id/txt_meal_option_extra_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/light_gray"
+                android:padding="5dp"
+                android:text="@string/extra"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+            <com.nmotion.android.view.SelectableViewGroup
+                android:id="@+id/meal_ingridients_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text=""
+                android:visibility="invisible" />
+            <include layout="@layout/quantity_block_layout" />
+
+            <TextView
+                android:id="@+id/txt_comment_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_comment"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txt_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="@string/txt_your_special_directions"
+                android:minHeight="100dp" />
+            <Button
+                android:id="@+id/btn_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_red_btn_background_selector"
+                android:onClick="onOrderClick"
+                android:text="@string/txt_update_cart" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

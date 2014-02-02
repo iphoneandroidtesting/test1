@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- change to release key -->
+    <!-- debug key -->
+    <string name="map_api_key">0ZqNuC-pOeS9pEAyYHoDm-AeEr4kpRs-4C_jRlw</string>
+    <!-- release key -->
+    <!-- <string name="map_api_key">0LnKxN94dPFVPtrjZUF3zi96CAh3tF_00KpN22g</string> -->
+    <string name="terms_page">terms_en.html</string>
+
+</resources>
