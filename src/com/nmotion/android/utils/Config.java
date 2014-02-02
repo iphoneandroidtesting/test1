@@ -23,38 +23,14 @@ public class Config {
 	public static final boolean SAVE_LOGIN = true;
 	public static final int SEARCH_SYMBOLS_LENGTH = 3;
 	
-        //prod
-        public static final String APP_ID = SERVER_INDEX==2 ? "132227170295952" : (SERVER_INDEX==1 ? "330287150421549" :"124395924385734");
-        public static final String SERVICE_URI_API_PART = "/api/v" + (SERVER_INDEX==2 ? "1/" : "2/");
-        public static final String SERVICE_URL = SERVER_INDEX==2 ? "http://nmotion.dk" : (SERVER_INDEX==1 ? "http://demo.nmotion.pp.ciklum.com" :"http://stage.nmotion.pp.ciklum.com");
-        public static final String SERVICE_URI = SERVICE_URL+SERVICE_URI_API_PART;
-        public static final String ACCEPT_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/accepted";
-        public static final String CANCEL_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/cancelled";
-        public static final String URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/";
-        
-	// stage
-//	public static final String APP_ID = "124395924385734";
-//	public static final String SERVICE_URI_API_PART = "/api/v2/";
-//	public static final String SERVICE_URL = "http://stage.nmotion.pp.ciklum.com";
-//	public static final String SERVICE_URI = SERVICE_URL+SERVICE_URI_API_PART;
-//	public static final String ACCEPT_URL_CALLBACK = "http://stage.nmotion.pp.ciklum.com/paymentconfirmation/accepted";
-//	public static final String CANCEL_URL_CALLBACK = "http://stage.nmotion.pp.ciklum.com/paymentconfirmation/cancelled";
-//	public static final String URL_CALLBACK = "http://stage.nmotion.pp.ciklum.com/paymentconfirmation/";
-
-	// dev
-	// public static final String SERVICE_URI ="http://dev.nmotion.pp.ciklum.com/api/v1/";
-	// public static final String ACCEPT_URL_CALLBACK ="http://dev.nmotion.pp.ciklum.com/paymentconfirmation/accepted";
-	// public static final String CANCEL_URL_CALLBACK ="http://dev.nmotion.pp.ciklum.com/paymentconfirmation/cancelled";
-	// public static final String URL_CALLBACK ="http://dev.nmotion.pp.ciklum.com/paymentconfirmation/";
-	
-	// demo
-//	 public static final String APP_ID = "330287150421549";
-//	 public static final String SERVICE_URI_API_PART = "/api/v1/";
-//	 public static final String SERVICE_URL = "http://demo.nmotion.pp.ciklum.com";
-//	 public static final String SERVICE_URI =SERVICE_URL+SERVICE_URI_API_PART;
-//	 public static final String ACCEPT_URL_CALLBACK = "http://demo.nmotion.pp.ciklum.com/paymentconfirmation/accepted";
-//	 public static final String CANCEL_URL_CALLBACK = "http://demo.nmotion.pp.ciklum.com/paymentconfirmation/cancelled";
-//	 public static final String URL_CALLBACK = "http://demo.nmotion.pp.ciklum.com/paymentconfirmation/";
+	// prod
+    public static final String APP_ID = SERVER_INDEX==2 ? "132227170295952" : (SERVER_INDEX==1 ? "330287150421549" :"124395924385734");
+    public static final String SERVICE_URI_API_PART = "/api/v2";
+    public static final String SERVICE_URL = SERVER_INDEX==2 ? "http://nmotion.dk" : "http://79.143.37.62:8088";
+    public static final String SERVICE_URI = SERVICE_URL+SERVICE_URI_API_PART;
+    public static final String ACCEPT_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/accepted";
+    public static final String CANCEL_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/cancelled";
+    public static final String URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/";
 
 	public static final boolean USE_FAKE_LOCATION = false;
 	public static final double FAKE_LAT = 50.425243;
