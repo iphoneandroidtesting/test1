@@ -72,6 +72,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
         Date currentDate = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(currentDate);
+        
         // Adding 15 minutes to current time, predefined interval requested by client
         calendar.add(Calendar.MINUTE, 15);
         Date orderTime = calendar.getTime();

@@ -139,6 +139,13 @@
                     android:maxLines="1"
                     android:minWidth="60dip" />
             </LinearLayout>
+            <DatePicker 
+            	android:id="@+id/datePicker1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
             <TimePicker
                 android:id="@+id/timePicker1"
                 android:layout_width="fill_parent"
