@@ -21,9 +21,15 @@
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="Select Delivery Time, Please:"
+            android:text="Select Delivery Time and Date, Please:"
             android:textColor="@color/white" >
         </TextView>
+
+        <DatePicker
+            android:id="@+id/datePicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
 
         <TimePicker
             android:id="@+id/timePicker1"

@@ -4,7 +4,7 @@ public class Config {
 	public static final String LOG_TAG = "Nmotion";
 	public static final String TAG = "Nmotion";
 	public static final boolean DEBUG_MODE = false;
-	public static final int SERVER_INDEX = 1; //0 - stage; 1 - demo; 2 - prod
+	public static final int SERVER_INDEX = 2; //0 - stage; 1 - demo; 2 - prod
 	/////demo
 	public static final boolean LOG_HTTP = true;
 	public static final boolean LOG_SDCARD = true;
@@ -26,7 +26,7 @@ public class Config {
 	// prod
     public static final String APP_ID = SERVER_INDEX==2 ? "132227170295952" : (SERVER_INDEX==1 ? "330287150421549" :"124395924385734");
     public static final String SERVICE_URI_API_PART = "/api/v2/";
-    public static final String SERVICE_URL = SERVER_INDEX==2 ? "http://nmotion.dk" : "http://79.143.37.62:8088";
+    public static final String SERVICE_URL = SERVER_INDEX==2 ? "http://nmotion.dk" : "http://nmotion.dk"; //"http://79.143.37.62:8088";
     public static final String SERVICE_URI = SERVICE_URL+SERVICE_URI_API_PART;
     public static final String ACCEPT_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/accepted";
     public static final String CANCEL_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/cancelled";

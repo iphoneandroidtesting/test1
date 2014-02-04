@@ -1,6 +1,7 @@
 package com.nmotion.android.view;
 
 import java.util.Date;
+import java.util.Calendar;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -12,9 +13,11 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.text.TextUtils;
+import android.text.method.DateTimeKeyListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -44,6 +47,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
     RadioButton radio1, radio2, radio3;
     int i;
     TimePicker timePicker;
+    DatePicker datePicker;
 
     public RestaurantCheckInDialog(Context context, Restaurant mRestaurant) {
         super(context);
@@ -60,8 +64,33 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
         radio3 = (RadioButton) findViewById(R.id.radio2);
         tableNumber = (EditText) findViewById(R.id.txt_table_number);
         roomNumber = (EditText) findViewById(R.id.txt_room_number);
+        
+        /**
+         * Following fragment of code calculates current date and adds 15 minutes to it,
+         * to initialize Date and Time pickers.
+         * */
+        Date currentDate = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(currentDate);
+        // Adding 15 minutes to current time, predefined interval requested by client
+        calendar.add(Calendar.MINUTE, 15);
+        Date orderTime = calendar.getTime();
+        
         timePicker = (TimePicker) findViewById(R.id.timePicker1);
-        timePicker.setCurrentHour(new Date().getHours()+1);
+        datePicker = (DatePicker) findViewById(R.id.datePicker1);
+        
+        
+        /**
+         * Since there is a possibility that some restaurants can work 24/7 or just in interval
+         * that involves date change in the middle of work day e.g. from 12:00 to 01:00
+         * we should consider this in calculation of default pick up time, thus we're using calendar object
+         * to calculate exact date and time in 15 minutes of current time and date.
+         */
+        datePicker.updateDate(orderTime.getYear(), orderTime.getMonth(), orderTime.getDay());
+        timePicker.setCurrentHour(orderTime.getHours());
+        timePicker.setCurrentMinute(orderTime.getMinutes());
+        
+        
         if (!mRestaurant.isInHouse)
             radio1.setVisibility(View.GONE);
         else {
@@ -75,6 +104,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
         if (!mRestaurant.isTakeAway){
             radio2.setVisibility(View.GONE);
             timePicker.setVisibility(View.GONE);
+            datePicker.setVisibility(View.GONE);
         }
         if (!mRestaurant.isTakeAway && !mRestaurant.isRoomService && !mRestaurant.isInHouse){
             roomNumberLayout.setBackgroundColor(getContext().getResources().getColor(R.color.light_gray));
@@ -107,6 +137,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                         roomNumber.setEnabled(false);
                         tableNumber.setEnabled(true);
                         timePicker.setVisibility(View.GONE);
+                        datePicker.setVisibility(View.GONE);
                         break;
                     case R.id.radio1:
                         roomNumberLayout.setBackgroundColor(getContext().getResources().getColor(R.color.light_gray));
@@ -114,6 +145,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                         roomNumber.setEnabled(false);
                         tableNumber.setEnabled(false);
                         timePicker.setVisibility(View.VISIBLE);
+                        datePicker.setVisibility(View.VISIBLE);
                         break;
                     case R.id.radio2:      
                         tableNumberLayout.setBackgroundColor(getContext().getResources().getColor(R.color.light_gray));
@@ -121,6 +153,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                         roomNumber.setEnabled(true);
                         tableNumber.setEnabled(false);
                         timePicker.setVisibility(View.GONE);
+                        datePicker.setVisibility(View.GONE);
                         break;
                     default:
                         break;
@@ -156,6 +189,24 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                 return PreferencesManager.NO_CHECKIN_MODE;
         }
     }
+    
+    public boolean isAllowedPickupTime(Date pickupDate) {
+    	Calendar calendar = Calendar.getInstance();
+    	calendar.setTime(new Date());
+        calendar.add(Calendar.MINUTE, 15);
+        Date minDate = calendar.getTime();
+        return pickupDate.getTime() >= minDate.getTime();
+    }
+    
+    public Date getCheckInDateTime() {
+    	Date date = new Date();
+        date.setYear(datePicker.getYear());
+        date.setMonth(datePicker.getMonth());
+        date.setDate(datePicker.getDayOfMonth());
+        date.setHours(timePicker.getCurrentHour());
+        date.setMinutes(timePicker.getCurrentMinute());
+        return date;
+    }
 
     @Override
     public void onClick(View v) {
@@ -165,11 +216,11 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                 if (TextUtils.isEmpty(number)) {
                     AppUtils.showToast(getContext(), R.string.txt_pls_enter_table_number);
                 } else {
-                    Date date = new Date();
-                    if (number.equals("-1") && (timePicker.getCurrentHour()*60+timePicker.getCurrentMinute()-60)<(date.getHours()*60+date.getMinutes())){
+                    Date date = getCheckInDateTime();
+                    if (number.equals("-1") && !isAllowedPickupTime(date)){
                         AlertDialog dialog = new AlertDialog.Builder(context).create();
                         dialog.setTitle("Warning");
-                        dialog.setMessage("You have selected time that is less then in an hour or even is in the past. In such case the order will be left for tomorrow.\n\nDo you agree?");
+                        dialog.setMessage("You have selected time that is less then in an 15 minutes or even is in the past. In such case the order will be left for tomorrow.\n\nDo you agree?");
                         dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Change time", new DialogInterface.OnClickListener() {                            
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -280,7 +331,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                 isTableEmpty = arg0[2];
             }
             try {
-                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? (timePicker.getCurrentHour()*60+timePicker.getCurrentMinute())*60 : -1);
+                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? (int)getCheckInDateTime().getTime() : -1);
             } catch (NetworkException e) {
                 if (e.getHttpCode() == NetworkException.HTTP_CODE_UPDATE)
                     return new SimpleResult(e.getHttpCode(), e.getMessage());
