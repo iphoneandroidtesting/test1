@@ -4,7 +4,7 @@ public class Config {
 	public static final String LOG_TAG = "Nmotion";
 	public static final String TAG = "Nmotion";
 	public static final boolean DEBUG_MODE = false;
-	public static final int SERVER_INDEX = 2; //0 - stage; 1 - demo; 2 - prod
+	public static final int SERVER_INDEX = 1; //0 - stage; 1 - demo; 2 - prod
 	/////demo
 	public static final boolean LOG_HTTP = true;
 	public static final boolean LOG_SDCARD = true;
