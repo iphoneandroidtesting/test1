@@ -2,6 +2,7 @@ package com.nmotion.android.view;
 
 import java.util.Date;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -70,7 +71,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
          * to initialize Date and Time pickers.
          * */
         Date currentDate = new Date();
-        Calendar calendar = Calendar.getInstance();
+        Calendar calendar = new GregorianCalendar();
         calendar.setTime(currentDate);
         
         // Adding 15 minutes to current time, predefined interval requested by client
@@ -86,8 +87,11 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
          * that involves date change in the middle of work day e.g. from 12:00 to 01:00
          * we should consider this in calculation of default pick up time, thus we're using calendar object
          * to calculate exact date and time in 15 minutes of current time and date.
+         *
+         * Because default method Date.getYear is totally retarded, it returns number of years passed since 1900
+         * hence the "+ 1900" part of following expression.
          */
-        datePicker.updateDate(orderTime.getYear(), orderTime.getMonth(), orderTime.getDay());
+        datePicker.updateDate(orderTime.getYear() + 1900, orderTime.getMonth(), orderTime.getDay());
         timePicker.setCurrentHour(orderTime.getHours());
         timePicker.setCurrentMinute(orderTime.getMinutes());
         
@@ -200,13 +204,13 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
     }
     
     public Date getCheckInDateTime() {
-    	Date date = new Date();
-        date.setYear(datePicker.getYear());
-        date.setMonth(datePicker.getMonth());
-        date.setDate(datePicker.getDayOfMonth());
-        date.setHours(timePicker.getCurrentHour());
-        date.setMinutes(timePicker.getCurrentMinute());
-        return date;
+    	Calendar cal = new GregorianCalendar();
+    	cal.set(datePicker.getYear(), 
+    			datePicker.getMonth(),
+    			datePicker.getDayOfMonth(),
+    			timePicker.getCurrentHour(), 
+    			timePicker.getCurrentMinute());
+        return cal.getTime();
     }
 
     @Override
