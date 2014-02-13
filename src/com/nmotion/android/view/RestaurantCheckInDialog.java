@@ -336,7 +336,8 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                 isTableEmpty = arg0[2];
             }
             try {
-                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? (int)getCheckInDateTime().getTime() : -1);
+            	// Dividing .getTime result by 1000 to get number of seconds instead of milliseconds.
+                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? ((int)getCheckInDateTime().getTime() / 1000) : -1);
             } catch (NetworkException e) {
                 if (e.getHttpCode() == NetworkException.HTTP_CODE_UPDATE)
                     return new SimpleResult(e.getHttpCode(), e.getMessage());
