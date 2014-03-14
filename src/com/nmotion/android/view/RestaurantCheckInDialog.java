@@ -91,7 +91,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
          * Because default method Date.getYear is totally retarded, it returns number of years passed since 1900
          * hence the "+ 1900" part of following expression.
          */
-        datePicker.updateDate(orderTime.getYear() + 1900, orderTime.getMonth(), orderTime.getDay());
+        // datePicker.updateDate(orderTime.getYear() + 1900, orderTime.getMonth(), orderTime.getDay());
         timePicker.setCurrentHour(orderTime.getHours());
         timePicker.setCurrentMinute(orderTime.getMinutes());
         
@@ -337,7 +337,8 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
             }
             try {
             	// Dividing .getTime result by 1000 to get number of seconds instead of milliseconds.
-                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? ((int)getCheckInDateTime().getTime() / 1000) : -1);
+            	int takeawayPickupTime = (int) (getCheckInDateTime().getTime() / 1000);
+                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? takeawayPickupTime : -1);
             } catch (NetworkException e) {
                 if (e.getHttpCode() == NetworkException.HTTP_CODE_UPDATE)
                     return new SimpleResult(e.getHttpCode(), e.getMessage());
