@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string name="faq_page">faq_page_dk.html</string>
     <!-- change to release key -->
     <!-- debug key -->
     <string name="map_api_key">0ZqNuC-pOeS9pEAyYHoDm-AeEr4kpRs-4C_jRlw</string>

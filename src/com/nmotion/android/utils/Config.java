@@ -26,7 +26,7 @@ public class Config {
 	// prod
     public static final String APP_ID = SERVER_INDEX==2 ? "132227170295952" : (SERVER_INDEX==1 ? "330287150421549" :"124395924385734");
     public static final String SERVICE_URI_API_PART = "/api/v2/";
-    public static final String SERVICE_URL = SERVER_INDEX==2 ? "http://nmotion.dk" : "http://79.143.37.62:8088/app_dev.php";
+    public static final String SERVICE_URL = SERVER_INDEX==2 ? "http://nmotion.dk" : "http://79.143.37.62:8088";
     public static final String SERVICE_URI = SERVICE_URL+SERVICE_URI_API_PART;
     public static final String ACCEPT_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/accepted";
     public static final String CANCEL_URL_CALLBACK = SERVICE_URL+"/paymentconfirmation/cancelled";
