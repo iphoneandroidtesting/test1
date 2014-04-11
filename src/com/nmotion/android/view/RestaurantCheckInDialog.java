@@ -95,6 +95,8 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
         timePicker.setCurrentHour(orderTime.getHours());
         timePicker.setCurrentMinute(orderTime.getMinutes());
         
+        timePicker.setIs24HourView(true);
+        
         
         if (!mRestaurant.isInHouse)
             radio1.setVisibility(View.GONE);
