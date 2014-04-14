@@ -92,10 +92,9 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
          * hence the "+ 1900" part of following expression.
          */
         // datePicker.updateDate(orderTime.getYear() + 1900, orderTime.getMonth(), orderTime.getDay());
+        timePicker.setIs24HourView(true);
         timePicker.setCurrentHour(orderTime.getHours());
         timePicker.setCurrentMinute(orderTime.getMinutes());
-        
-        timePicker.setIs24HourView(true);
         
         
         if (!mRestaurant.isInHouse)
