@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string-array name="questions_array">
-        <item> Kan Nmotion bruges alle steder ?</item>
-        <item>Er mine kortdetaljer sikret ?</item>
-        <item>Kan man ændre sprog ?</item>
-        <item>Koster det noget at downloade Nmotion’s app?</item>
+        <item>Where can I use Nmotion?</item>
+		<item>Does it cost anything to use Nmotion?</item>
+		<item>What will Nmotion have access to if I log in with my Facebook account?</item>
+		<item>Why can’t I see any restaurants?</item>
+		<item>Is my credit card information stored safe?</item>
+		<item>Can I change language?</item>
+		<item>I have got a new credit card, how do I change my credit card information?</item>
+		<item>Can I store multiple credit cards?</item>
+		<item>How do I get a copy of the bill?</item>
+		<item>I do not want to be checked in on my Facebook wall how do I deactivate it?</item>
     </string-array>
     <string-array name="answers_array">
-        <item>Nmotion app kan bruges på de tilmeldte steder, der kan ses i app’en eller på Nmotion.dk</item>
-        <item>Ja, vi gemmer ikke alle dine kortoplysninger og de er derfor aldrig er i fare.</item>
-        <item>Nmotion findes på dansk og engelsk</item>
-        <item>Nej, Nmotion den er gratis. Du betaler som andre steder gebyr for at benytte dit betalingskort.</item>
+        <item>Nmotion can be used in Denmark, Sweden, Norway, Germany and Ukraine.</item>
+		<item>No, Nmotion is free to use, there may be some data traffic to your telephone company.</item>
+		<item>Nmotion will use mail addr. to send a copy of the bill to your email. Nmotion need to know your location, in order to show you the nearest Nmotion places.</item>
+		<item>You have not given Nmotion permission to know your location.You can delete Nmotion App, download it again and give permission the first time you start the app</item>
+		<item>Nmotion hasn’t at any time your credit card information. Your credit card information is stored and encrypted by our credit card gateway provider DIBS.This ensures that all information is stored securely and encrypted.</item>
+		<item>Yes, Nmotion is available in Danish and English. Note that, not all menu cards are available in other languages. To change the language, go to Main menu -> Settings -> Language.</item>
+		<item>You log in to your Nmotion account -> Main menu -> My Account -> Edit credit card-> Edit -> Delete previous card -> Add new</item>
+		<item>Yes, this is how you do it; You log in to your Nmotion account -> Main menu -> My Account -> Edit credit card-> Edit -> Add new</item>
+		<item>All your purchases are stored on your Nmotion account Main Menu -> My Account -> My orders. If you want to get the physical, this is how you do; You log in to your account Nmotion -> Main Menu -> My Account -> My Orders -> Select the bill -> Send to e-mail.</item>
+		<item>If you do not want to be Checked at the restaurant you visit on your Facebook wall you can do following; You log in to your account Nmotion -> Main Menu -> Settings -> Check in on Facebook. Note that you will continue to still be able to log in to Nmotion using your Facebook account.</item>
     </string-array>
 
 </resources>

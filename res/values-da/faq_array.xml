@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 
+"fag_question_1" = "Hvor kan man benytte Nmotion?";
+"fag_answer_1" = "Nmotion kan benyttes PT. i Danmark, Sverige, Norge, Tyskland og Ukraine.";
+"fag_question_2" = "Koster det noget at benytte Nmotion?";
+"fag_answer_2" = "Nej, Nmotion er gratis at bruge, der kan dog forekomme data trafik til dit teleselskab.";
+"fag_question_3" = "Hvad skal Nmotion have adgang til hvis jeg logger ind med min Facebook konto?";
+"fag_answer_3" = "Nmotion skal bruge mail adr. for at kunne sende en kopi af regningen til din mail. Nmotion skal kende din lokalitet for at kunne vise dig de nærmeste Nmotion steder.";
+"fag_question_4" = "Hvorfor bliver der ikke vist nogle restauranter?";
+"fag_answer_4" = "Ved download har du ikke givet Nmotion tilladelse til at kende din lokation. Du kan slette Nmotion App, hente den igen og give tilladelse første gang du starter App’en";
+"fag_question_5" = "Gemmer Nmotion mine kreditkort oplysninger sikkert?";
+"fag_answer_5" = "Nmotion har ikke på noget tidspunkt dine kreditkort oplysninger. Dine kreditkort oplysninger bliver gemt og krypteret af vores kreditkort gateway leverandør DIBS. Dette sikre at alle oplysninger bliver gemt sikkert og krypteret.";
+"fag_question_6" = "Kan man skifte sprog?";
+"fag_answer_6" = "Ja, Nmotion findes på Dansk og Engelsk. Bemærk at det ikke er alle menu kort der også findes på andre sprog. Du skifter sprog ved at går ind under Hovedmenu -> Indstillinger -> Sprog.";
+"fag_question_7" = "Jeg har fået nyt kreditkort, hvordan ændrer jeg mine kreditkort oplysninger?";
+"fag_answer_7" = "Du logger ind på din Nmotion konto -> Hovedmenu -> Min konto -> Redigere kreditkort-> Redigere -> Slet tidligere kort -> Tilføj nyt";
+"fag_question_8" = "Kan jeg gemme flere kreditkort?";
+"fag_answer_8" = "Ja, sådan gør du; Du logger ind på din Nmotion konto -> Hovedmenu -> Min konto -> Redigere kreditkort-> Redigere -> Tilføj nyt";
+"fag_question_9" = "Hvordan får jeg en kopi af regningen?";
+"fag_answer_9" = "Alle dine køb bliver gemt på din Nmotion konto, Hovedmenu -> Min konto -> Mine bestillinger. Hvis du ønsker at få den fysisk skal du, Hovedmenu -> Min konto -> Mine bestillinger -> Vælg regningen -> Send til e-mail.";
+"fag_question_10" = "Jeg ønsker ikke at blive checket ind på min Facebook væk, hvordan deaktivere jeg det?";
+"fag_answer_10" = "Hvis du ikke ønsker blive Checket ind på den restaurant du besøger på din Facebook væg skal du; Hovedmenu -> Indstillinger - > Check ind på Facebook. Bemærk, du vil fortsat stadig kunne logge ind på Nmotion via din Facebook konto.";
+	
+	 -->
+    <string-array name="questions_array">
+       	<item>Hvor kan man benytte Nmotion?</item>
+		<item>Koster det noget at benytte Nmotion?</item>
+		<item>Hvad skal Nmotion have adgang til hvis jeg logger ind med min Facebook konto?</item>
+		<item>Hvorfor bliver der ikke vist nogle restauranter?</item>
+		<item>Gemmer Nmotion mine kreditkort oplysninger sikkert?</item>
+		<item>Kan man skifte sprog?</item>
+		<item>Jeg har fået nyt kreditkort, hvordan ændrer jeg mine kreditkort oplysninger?</item>
+		<item>Kan jeg gemme flere kreditkort?</item>
+		<item>Hvordan får jeg en kopi af regningen?</item>
+		<item>Jeg ønsker ikke at blive checket ind på min Facebook væk, hvordan deaktivere jeg det?</item>;
+    </string-array>
+    <string-array name="answers_array">
+        <item>Nmotion kan benyttes PT. i Danmark, Sverige, Norge, Tyskland og Ukraine.</item>
+		<item>Nej, Nmotion er gratis at bruge, der kan dog forekomme data trafik til dit teleselskab.</item>
+		<item>Nmotion skal bruge mail adr. for at kunne sende en kopi af regningen til din mail. Nmotion skal kende din lokalitet for at kunne vise dig de nærmeste Nmotion steder.</item>
+		<item>Ved download har du ikke givet Nmotion tilladelse til at kende din lokation. Du kan slette Nmotion App, hente den igen og give tilladelse første gang du starter App’en</item>
+		<item>Nmotion har ikke på noget tidspunkt dine kreditkort oplysninger. Dine kreditkort oplysninger bliver gemt og krypteret af vores kreditkort gateway leverandør DIBS. Dette sikre at alle oplysninger bliver gemt sikkert og krypteret.</item>
+		<item>Ja, Nmotion findes på Dansk og Engelsk. Bemærk at det ikke er alle menu kort der også findes på andre sprog. Du skifter sprog ved at går ind under Hovedmenu -> Indstillinger -> Sprog.</item>
+		<item>Du logger ind på din Nmotion konto -> Hovedmenu -> Min konto -> Redigere kreditkort-> Redigere -> Slet tidligere kort -> Tilføj nyt</item>
+		<item>Ja, sådan gør du; Du logger ind på din Nmotion konto -> Hovedmenu -> Min konto -> Redigere kreditkort-> Redigere -> Tilføj nyt</item>
+		<item>Alle dine køb bliver gemt på din Nmotion konto, Hovedmenu -> Min konto -> Mine bestillinger. Hvis du ønsker at få den fysisk skal du, Hovedmenu -> Min konto -> Mine bestillinger -> Vælg regningen -> Send til e-mail.</item>
+		<item>Hvis du ikke ønsker blive Checket ind på den restaurant du besøger på din Facebook væg skal du; Hovedmenu -> Indstillinger - > Check ind på Facebook. Bemærk, du vil fortsat stadig kunne logge ind på Nmotion via din Facebook konto.</item>
+    </string-array>
+
+</resources>
