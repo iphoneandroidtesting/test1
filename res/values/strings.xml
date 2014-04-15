@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
 
-    <string name="build_number">0.BUILD_NUMBER</string>
+    <string name="build_number">0.7</string>
     <string name="app_name">Nmotion</string>
     <string name="COMMON_ERROR">Error</string>
     <!--
