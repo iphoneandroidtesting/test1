@@ -316,7 +316,7 @@ public class NetworkService extends HTTPHelper {
         return getRestaurants(latitude, longitude, null, search, context);
     }
 
-    public void checkIn(int restaurantId, String table, int isForce, int isTableEmpty, Context context, int checkInMode, int takeawayPickupTime) throws NetworkException {
+    public void checkIn(int restaurantId, String table, int isForce, int isTableEmpty, Context context, int checkInMode, int takeawayPickupTime, String contactPhoneNumber) throws NetworkException {
         if (checkInMode==PreferencesManager.NO_CHECKIN_MODE)
             return;
         boolean isFacebookAuth = updateHeader();
@@ -340,6 +340,8 @@ public class NetworkService extends HTTPHelper {
             }
             if (takeawayPickupTime!=-1)
                 object.put("takeawayPickupTime", takeawayPickupTime);
+            if(contactPhoneNumber!="")
+            	object.put("contactPhoneNumber", contactPhoneNumber);
         } catch (JSONException e) {
             Logger.warning(e.toString());
         }

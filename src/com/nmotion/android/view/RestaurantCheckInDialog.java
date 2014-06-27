@@ -38,7 +38,7 @@ import com.nmotion.android.utils.AppUtils;
 public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
     int status;
     public static final String DATA_RESTAURANT_ID = "restaurant_id";
-    private EditText tableNumber, roomNumber;
+    private EditText tableNumber, roomNumber, contactPhoneNumberEdit;
     private String tableId;
     private User currentUser;
     View joinBtn, roomNumberLayout, tableNumberLayout;
@@ -65,7 +65,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
         radio3 = (RadioButton) findViewById(R.id.radio2);
         tableNumber = (EditText) findViewById(R.id.txt_table_number);
         roomNumber = (EditText) findViewById(R.id.txt_room_number);
-        
+        contactPhoneNumberEdit = (EditText) findViewById(R.id.txt_contact_phone_number);
         /**
          * Following fragment of code calculates current date and adds 15 minutes to it,
          * to initialize Date and Time pickers.
@@ -339,7 +339,8 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
             try {
             	// Dividing .getTime result by 1000 to get number of seconds instead of milliseconds.
             	int takeawayPickupTime = (int) (getCheckInDateTime().getTime() / 1000);
-                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? takeawayPickupTime : -1);
+            	String contactPhoneNumber = contactPhoneNumberEdit.getText().toString();
+                App.getInstance().getNetworkService().checkIn(restaurantId, table, isForce, isTableEmpty, context, getCheckInMode(), getCheckInMode()==PreferencesManager.TAKE_AWAY_CHECKIN_MODE ? takeawayPickupTime : -1, contactPhoneNumber);
             } catch (NetworkException e) {
                 if (e.getHttpCode() == NetworkException.HTTP_CODE_UPDATE)
                     return new SimpleResult(e.getHttpCode(), e.getMessage());
