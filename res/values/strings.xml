@@ -230,4 +230,5 @@
     <string name="restaurent_closed_warning">You cannot place an order in a closed restaurant</string>
     <string name="options_ingrids_deleted_messaege">Sorry, but selected options/ingridients were made unavailable on server.</string>
     <string name="txt_no_category_meals">Sorry, there are no meals for this category available at the moment.</string>
+    <string name="txt_phone_number">Contact Phone Number</string>
 </resources>

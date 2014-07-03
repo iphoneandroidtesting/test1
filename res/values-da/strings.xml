@@ -166,4 +166,5 @@
 	<string name="dialog_btn_cancel">Nej</string>
 	<string name="txt_order_new">Tilbage</string>
 	<string name="txt_order_order_details_screen">Betal</string>
+	 <string name="txt_phone_number">Kontakt Telefonnummer</string>
 </resources>

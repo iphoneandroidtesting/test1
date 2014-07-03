@@ -20,6 +20,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -41,7 +42,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
     private EditText tableNumber, roomNumber, contactPhoneNumberEdit;
     private String tableId;
     private User currentUser;
-    View joinBtn, roomNumberLayout, tableNumberLayout;
+    View joinBtn, roomNumberLayout, tableNumberLayout, phoneNumberLayout;
     Restaurant mRestaurant;
     Context context;
     RadioGroup radioGroup;
@@ -59,6 +60,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
         joinBtn = findViewById(R.id.joinBtn);
         roomNumberLayout = findViewById(R.id.room_number_layout);
         tableNumberLayout = findViewById(R.id.table_number_layout);
+        phoneNumberLayout = findViewById(R.id.phone_number_layout);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         radio1 = (RadioButton) findViewById(R.id.radio0);
         radio2 = (RadioButton) findViewById(R.id.radio1);
@@ -96,6 +98,7 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
         timePicker.setCurrentHour(orderTime.getHours());
         timePicker.setCurrentMinute(orderTime.getMinutes());
         
+        phoneNumberLayout.setVisibility(View.GONE);
         
         if (!mRestaurant.isInHouse)
             radio1.setVisibility(View.GONE);
@@ -132,6 +135,24 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
             }
         }
         
+        if(mRestaurant.isInHouse) {
+        	roomNumberLayout.setVisibility(View.GONE);
+            tableNumberLayout.setVisibility(View.VISIBLE);
+            phoneNumberLayout.setVisibility(View.GONE);
+        } else if(mRestaurant.isTakeAway) {
+        	roomNumberLayout.setVisibility(View.GONE);
+            tableNumberLayout.setVisibility(View.GONE);
+            phoneNumberLayout.setVisibility(View.VISIBLE);
+        } else if(mRestaurant.isRoomService) {
+        	roomNumberLayout.setVisibility(View.VISIBLE);
+            tableNumberLayout.setVisibility(View.GONE);
+            phoneNumberLayout.setVisibility(View.GONE);
+        } else {
+        	roomNumberLayout.setVisibility(View.GONE);
+            tableNumberLayout.setVisibility(View.GONE);
+            phoneNumberLayout.setVisibility(View.GONE);
+        }
+        
         ((RadioButton)radioGroup.getChildAt(0)).setChecked(true);
         radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {            
             @Override
@@ -142,6 +163,13 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                         tableNumberLayout.setBackgroundColor(Color.WHITE);
                         roomNumber.setEnabled(false);
                         tableNumber.setEnabled(true);
+                        
+                        // IDGAF, really
+                        roomNumberLayout.setVisibility(View.GONE);
+                        tableNumberLayout.setVisibility(View.VISIBLE);
+                        phoneNumberLayout.setVisibility(View.GONE);
+                        
+                        
                         timePicker.setVisibility(View.GONE);
                         datePicker.setVisibility(View.GONE);
                         break;
@@ -150,6 +178,11 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                         tableNumberLayout.setBackgroundColor(getContext().getResources().getColor(R.color.light_gray));
                         roomNumber.setEnabled(false);
                         tableNumber.setEnabled(false);
+                        
+                        roomNumberLayout.setVisibility(View.GONE);
+                        tableNumberLayout.setVisibility(View.GONE);
+                        phoneNumberLayout.setVisibility(View.VISIBLE);
+                        
                         timePicker.setVisibility(View.VISIBLE);
                         datePicker.setVisibility(View.VISIBLE);
                         break;
@@ -158,6 +191,12 @@ public class RestaurantCheckInDialog extends Dialog implements OnClickListener {
                         roomNumberLayout.setBackgroundColor(Color.WHITE);
                         roomNumber.setEnabled(true);
                         tableNumber.setEnabled(false);
+                        
+                        roomNumberLayout.setVisibility(View.VISIBLE);
+                        tableNumberLayout.setVisibility(View.GONE);
+                        phoneNumberLayout.setVisibility(View.GONE);
+                        
+                        
                         timePicker.setVisibility(View.GONE);
                         datePicker.setVisibility(View.GONE);
                         break;
