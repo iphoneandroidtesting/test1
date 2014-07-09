@@ -146,6 +146,10 @@
             android:name="com.nmotion.android.SettingsScreen"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.nmotion.android.RoomPaymentScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <meta-data android:name="com.google.android.maps.v2.API_KEY"
     		android:value="AIzaSyBrXU7gXwA-8wEn3VMmyBat_W_JvNb4fXs"/>
     </application>

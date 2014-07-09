@@ -179,6 +179,7 @@ public class OrderDetailsScreen extends BaseRestaurantScreen {
 	            return;
 	        }
 		App.getInstance().getCache().setOrderDetails(orderDetails);
+		
 		new SaveOrUpdateOrderTask().execute();
 	}
 
@@ -284,11 +285,16 @@ public class OrderDetailsScreen extends BaseRestaurantScreen {
 			progressDialog.dismiss();
 			switch (result.getCode()) {
 			case SimpleResult.STATUSE_DONE_OK:
-			    if (!DibsPaymentScreen.toUpdateOrderAfterCancel){
-				Intent intent = new Intent(getApplicationContext(), DibsPaymentScreen.class);
-				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-				intent.setAction(DibsPaymentScreen.ACTION_SAVE_THEN_PAY);
-				startActivity(intent);				 
+				if(App.getInstance().getPreferencesManager().getCheckInMode() == PreferencesManager.ROOM_SERVICE_CHECKIN_MODE) {
+					Intent intent = new Intent(getApplicationContext(), RoomPaymentScreen.class);
+					intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+					intent.setAction(RoomPaymentScreen.ACTION_DEFAULT);
+					startActivity(intent);
+				} else if (!DibsPaymentScreen.toUpdateOrderAfterCancel) {
+			    	Intent intent = new Intent(getApplicationContext(), DibsPaymentScreen.class);
+					intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+					intent.setAction(DibsPaymentScreen.ACTION_SAVE_THEN_PAY);
+					startActivity(intent);				 
 			    }else
 			        DibsPaymentScreen.toUpdateOrderAfterCancel=false;
 			    break;

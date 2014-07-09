@@ -14,6 +14,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.text.TextUtils;
 
 import com.nmotion.R;
@@ -67,6 +68,8 @@ public class NetworkService extends HTTPHelper {
 
     private static final String OPERATION_GET_CONFIG = "config.json";
     private static final String OPERATION_SEND_TO_MAIL = "orders/%s/sendtoemail.json";
+    
+    private static final String OPERATION_POST_PAYMENT = "payment.json";
     public static final int ORDER_STATUS_NEW_PAYMENT = 1;
     public static final int ORDER_STATUS_PENDING_PAYMENT = 2;
     public static final int ORDER_STATUS_CANCELLED = 5;
@@ -732,5 +735,36 @@ public class NetworkService extends HTTPHelper {
         currentUser = null;
         App.getInstance().getAppDataSource().deleteCachedSingleObject(User.class.getName());
     }
+    
+    public boolean postRoomPayment(String orderId, Context context) throws NetworkException {
+    	boolean isFacebookAuth = updateHeader();
+    	JSONObject object = new JSONObject();
+    	JSONObject response;
+    	System.out.println("Trying to post payment");
+    	try {
+    		if(!orderId.equals("") && orderId.matches("\\d+"))
+    			object.put("orderId", orderId);
+        } catch (JSONException e) {
+            Logger.warning(e.toString());
+        }
+    	
+    	try {
+            response = sendRequestPOST(String.format("%s%s", Config.SERVICE_URI, OPERATION_POST_PAYMENT), null, object, currentHeader, isFacebookAuth);
+        } catch (NetworkException e) {
+            throw e;
+        }
+    	
+    	try {
+    		
+    		System.out.println(response.toString());
+    		System.out.println(response.get("success"));
+    		
+    		return (Boolean) response.get("success");
+    	} catch (Exception e) {
+    		return false;
+    	}
+    	
+    }
+    
 
 }
