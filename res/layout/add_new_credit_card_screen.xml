@@ -63,7 +63,7 @@
                 </TextView>
 
                 <FrameLayout
-                    android:id="@+id/frameLayout1"
+                    android:id="@+id/frameLayout2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -112,7 +112,7 @@
                 </DatePicker>
 
                 <FrameLayout
-                    android:id="@+id/frameLayout2"
+                    android:id="@+id/frameLayout3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"

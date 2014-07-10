@@ -157,7 +157,7 @@
                 android:paddingRight="20dp" >
 
                 <TextView
-                    android:id="@+id/favorites_screen_new_order_text_view"
+                    android:id="@+id/favorites_screen_new_order_text_view2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
