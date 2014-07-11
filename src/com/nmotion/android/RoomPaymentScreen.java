@@ -1,6 +1,7 @@
 package com.nmotion.android;
 
 import com.nmotion.R;
+import com.nmotion.android.core.PreferencesManager;
 import com.nmotion.android.models.OrderDetails;
 import com.nmotion.android.models.Restaurant;
 import com.nmotion.android.network.NetworkException;
@@ -76,6 +77,9 @@ public class RoomPaymentScreen extends Activity {
 		protected void onPostExecute(Boolean result) {
 			if(result) {
 				App.getInstance().getCache().deleteOrderedMeals();
+				App.getInstance().getPreferencesManager().checkOut(
+						App.getInstance().getNetworkService().getCurrentUser().eMail, 
+						App.getInstance().getCache().getOrderDetails().restaurantId);
 				Intent intent = new Intent(getApplicationContext(), RestaurantsListScreen.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | 
 								Intent.FLAG_ACTIVITY_SINGLE_TOP);
