@@ -167,7 +167,7 @@
 	<string name="txt_order_new">Tilbage</string>
 	<string name="txt_order_order_details_screen">Betal</string>
 	<string name="txt_phone_number">Kontakt Telefonnummer</string>
-	<string name="txt_room_will_be_charged">Room #%d will be charged, press confirm to continue.</string>
-    <string name="txt_fee_will_be_charged_label_text">An additional fee of 90DKK will be charged for services provided.</string>
-    <string name="txt_confirm_room_invoicing_button_text">Confirm</string>
+	<string name="txt_room_will_be_charged">Ved accept vil værelse nummer #%d blive opkrævet</string>
+    <string name="txt_fee_will_be_charged_label_text">Der vil blive pålagt 90 DKK oven i det totale beløb i Room service tillægs</string>
+    <string name="txt_confirm_room_invoicing_button_text">Bekræft</string>
 </resources>
