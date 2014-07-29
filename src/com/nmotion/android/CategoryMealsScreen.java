@@ -147,6 +147,15 @@ public class CategoryMealsScreen extends BaseRestaurantScreen {
 				String menuCategoryId = params[1];
 				String mealId = params[2];
 				result = App.getInstance().getNetworkService().getMenuCategoryMealDescription(restaurantId, menuCategoryId, mealId, CategoryMealsScreen.this);
+				ArrayList<Meal> meals = App.getInstance().getCache().getMenuCategoryMeals(Integer.parseInt(menuCategoryId));
+				for(Meal meal : meals) {
+					if("".equals(meal.image)) {
+						Meal loadedMeal = App.getInstance().getNetworkService().getMenuCategoryMealDescription(restaurantId, menuCategoryId, String.valueOf(meal.id), CategoryMealsScreen.this);
+						if(loadedMeal != null) {
+							App.getInstance().getCache().setMeal(loadedMeal);
+						}
+					}
+				}
 			} catch (NetworkException e) {
 				Logger.warning(e.toString());
 			}
