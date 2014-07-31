@@ -149,7 +149,7 @@ public class CategoryMealsScreen extends BaseRestaurantScreen {
 				result = App.getInstance().getNetworkService().getMenuCategoryMealDescription(restaurantId, menuCategoryId, mealId, CategoryMealsScreen.this);
 				ArrayList<Meal> meals = App.getInstance().getCache().getMenuCategoryMeals(Integer.parseInt(menuCategoryId));
 				for(Meal meal : meals) {
-					if("".equals(meal.image)) {
+					if("".equals(meal.image) || meal.image == null) {
 						Meal loadedMeal = App.getInstance().getNetworkService().getMenuCategoryMealDescription(restaurantId, menuCategoryId, String.valueOf(meal.id), CategoryMealsScreen.this);
 						if(loadedMeal != null) {
 							App.getInstance().getCache().setMeal(loadedMeal);
